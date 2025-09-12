@@ -1,0 +1,48 @@
+Instalação dos programas:
+Aula -1
+	Node.Js
+   Para verificar se o programa foi instalado com sucesso, use o terminal 'CMD'
+   depois digite 'node -v + ENTER
+   Para ver a versão do 'NPM' digite 'npm -v + ENTER'
+
+Aula -2
+	Visual Studio Code:
+    Depois da instalão adicionar o plugin 'One Dark Pro' ao VS.code
+    Em seguida adicione outro plugin 'atom mateirial icons'
+
+Aula -3
+	Git for Windows
+	Marcar as 2 features do profile Windows terminal
+	Desmarca o release notes e marcar o Lauch Git Bach
+
+Aula -4 Criando a pasta do projeto
+	no terminal 'CMD' digite mkdir /c/NinjaDoCypress
+	acessar o site gitHub.com/ninjadocypress/webdojo e fazer o 'FORK' do projeto
+	escolher depois a opção 'Code' e deixar o SSH marcada e copia o codigo
+	dentro da pasta usando o terminal clona o projeto
+	Vai precisar de permissão para clonar o projeto,
+	ai digite no terminal: git config --global user.name "Teófilo Messias Filho" + ENTER
+	Depois digite: git config --global user.email "teofilo.messias@gmail.com" + ENTER
+ 	e digite: ssh-keygen -t rsa -b 4096 + ENTER
+	senha é: key
+	pegar o caminho aonde esta escrito ' Your identification has been saved in /c/Users/jailz/.ssh/id_rsa.pub'
+	ai ainda no terminal digite: cat + o caminho /c/Users/jailz/.ssh/id_rsa.pub
+	ficando assim: cat /c/Users/jailz/.ssh/id_rsa
+	copia o código gerado e vai no GitHub clica no usuário e vai na opção [SETTINGS] vai na opção SSH and GPG Keys
+	entra no botão [New SSH key]
+	volta no CMD e digite git clone e novamente passe a URL do site:
+	git clone gitHub.com/ninjadocypress/webdojo + ENTER
+
+Aula -6 Colocando o weddojo no ar, para colocar o servidor no ar é preciso entrar na pasta do projeto e acessar a pasta WEB
+	cd we + ENTER
+	depois digite: npm run dev
+	email: papipo
+	senha:
+
+Aula -7 No terminal para sair digite Ctrl + C
+	Fazendo a instalação do Windows Terminal
+
+Aula -8 Intalando o Cypress
+	Dentro da pasta WEB digite: npm install cypress + a versão do cypress
+	npm install cypress@14.1.0 depois faz a instalação udando o comando (npm install cypress@14.1.0 - D)
+	Agora digite o comando: npx cypress open
