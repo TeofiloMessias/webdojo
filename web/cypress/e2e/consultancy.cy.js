@@ -75,8 +75,16 @@ describe('Formulario de Consultoria', () => {
             .check()
         cy.contains('button', 'Enviar formulário')
             .click()
-        cy.contains('Sua solicitação de consultoria foi enviada com sucesso! Em breve, nossa equipe entrará em contato através do email fornecido.')
+        
+            cy.get('.modal', {timeout:7000})
             .should('be.visible')
+            .find('modal-content')
+            .should('be.visible')
+            .and('have.text','Sua solicitação de consultoria foi enviada com sucesso!' )
+
+        
+       // cy.contains('Sua solicitação de consultoria foi enviada com sucesso! Em breve, nossa equipe entrará em contato através do email fornecido.')
+         //   .should('be.visible')
 
     })
     it.only('Deve verificar os campos obrigatorios', () => {
