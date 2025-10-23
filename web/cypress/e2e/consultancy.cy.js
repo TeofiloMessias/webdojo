@@ -79,4 +79,36 @@ describe('Formulario de Consultoria', () => {
             .should('be.visible')
 
     })
+    it.only('Deve verificar os campos obrigatorios', () => {
+        cy.start()
+        cy.submitLoginForm('papito@webdojo.com', 'katana123')
+        cy.goTo('Formulários', 'Consultoria')
+
+        cy.contains('button', 'Enviar formulário')
+            .click()
+
+        cy.contains('label', 'Nome Completo *')
+            .parent()
+            .find('p')
+            .should('be.visible')
+            .should('have.text', 'Campo obrigatório')
+            .and('have.class', 'text-red-400')
+            .and('have.css', 'color', 'rgb(248, 113, 113)')
+
+        cy.contains('label', 'Email *')
+            .parent()
+            .find('p')
+            .should('be.visible')
+            .should('have.text', 'Campo obrigatório')
+            .and('have.class', 'text-red-400')
+            .and('have.css', 'color', 'rgb(248, 113, 113)')
+
+        cy.contains('p', 'Você precisa aceitar os termos de uso')
+            .parent()
+            .find('p')
+            .should('be.visible')
+            .and('have.class', 'text-red-400')
+            .and('have.css', 'color', 'rgb(248, 113, 113)')
+
+    })
 })
