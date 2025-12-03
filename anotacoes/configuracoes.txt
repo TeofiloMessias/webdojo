@@ -1,0 +1,13 @@
+1 - Fazer o fork do projeto no link:
+    * https://github.com/ninjadocypress/webdojo
+
+2 - Baixar o projeto pelo CMD com a seguinte configuração
+
+
+3 - Instalando o NPM pelo cmd com o comando
+    * npm install
+
+4 - Instalando cypress
+    * npm install cypress@14.1.0 -D
+
+5 - 
