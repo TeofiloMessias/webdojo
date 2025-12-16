@@ -21,6 +21,12 @@ describe('Formulario de consultoria', () => {
         cy.contains('label', 'Pessoa Jurídica')
             .find('input')
             .should('be.not.checked')
+        
+            cy.contains('label', 'CPF')
+                .parent()
+                .find('input')
+                .type('65602530070')
+                .should('have.value', '656.025.300-70')
 
 
     })
