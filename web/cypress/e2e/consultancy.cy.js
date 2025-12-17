@@ -42,6 +42,8 @@ describe('Formulario de consultoria', () => {
                 .should('be.checked')
 
         })
+        cy.get('input[type="file"]')
+            .selectFile('./cypress/fixtures/document.pdf', { force: true })
 
 
     })
