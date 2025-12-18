@@ -48,6 +48,24 @@ describe('Formulario de consultoria', () => {
         cy.get('textarea[placeholder="Descreva mais detalhes sobre sua necessidade"]')
             .type('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
 
+        const techs = [
+            'Cypress',
+            'Selenium',
+            'WebDriverIO',
+            'Playwright',
+            'Robot Framework'
+        ]
+        techs.forEach((tech) => {
+            cy.get('input[placeholder="Digite uma tecnologia e pressione Enter"]')
+                .type(tech)
+                .type('{enter}')
+            cy.contains('label', 'Tecnologias')
+                .parent()
+                .contains('span', tech)
+                .should('be.visible')
+
+
+        })
 
     })
 })
